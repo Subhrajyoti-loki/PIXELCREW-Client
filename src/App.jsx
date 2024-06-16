@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route ,Navigate} from 'react-router-dom';
 import ProtectedRoute from './components/protectRoute'; 
 
 
@@ -27,6 +27,9 @@ const App = () => {
   return (
     <>
       <Routes>
+
+      <Route path="/" element={<Navigate to="/home" />} />
+      
         {/* Admin Page! */}
 
         <Route path="/login" element={<Login />} />
